@@ -8,10 +8,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(),
+        drawer: const Drawer(),
         appBar: AppBar(
-          iconTheme: IconThemeData(color: Colors.black),
-          title: Text(
+          iconTheme: const IconThemeData(color: Colors.black),
+          title: const Text(
             "Home",
             style: TextStyle(color: Colors.black, fontSize: 17),
           ),
@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                   //   ),
                   // );
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.search,
                   size: 17,
                   // color: textColor,
@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                   //   ),
                   // );
                 },
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   backgroundColor: Color(0xffd6d382),
                   radius: 15,
                   child: Icon(
@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
             Container(
               height: 150,
               decoration: BoxDecoration(
-                image: DecorationImage(
+                image: const DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(
                       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi0Xg-k622Sbztlrb-L1o1CAla3zCbVc2lUw&usqp=CAU'),
@@ -75,55 +75,63 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                    // color: Colors.red,
-                    child: Column(children: [
-                      Padding(
-                        padding: EdgeInsets.only(right: 120, bottom: 10),
-                        child: Container(
-                            height: 50,
-                            width: 100,
-                            decoration: const BoxDecoration(
-                              color: Color(0xffd1ad17),
-                              borderRadius: BorderRadius.only(
-                                bottomRight: Radius.circular(50),
-                                bottomLeft: Radius.circular(50),
+                      flex: 2,
+                      child: Container(
+                        // color: Colors.red,
+                        child: Column(children: [
+                          Padding(
+                            padding: EdgeInsets.only(right: 120, bottom: 10),
+                            child: Container(
+                                height: 50,
+                                width: 100,
+                                decoration: const BoxDecoration(
+                                  color: Color(0xffd1ad17),
+                                  borderRadius: BorderRadius.only(
+                                    bottomRight: Radius.circular(50),
+                                    bottomLeft: Radius.circular(50),
+                                  ),
+                                ),
+                                child: const Center(
+                                    child: Text(
+                                  "Vegi",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Colors.white,
+                                      shadows: [
+                                        BoxShadow(
+                                            color: Colors.green,
+                                            blurRadius: 10,
+                                            offset: Offset(3, 3))
+                                      ]),
+                                ))),
+                          ),
+                          Text(
+                            '30% Off',
+                            style: TextStyle(
+                                fontSize: 40,
+                                color: Colors.green[100],
+                                fontWeight: FontWeight.bold),
+                          ),
+                          const Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Text(
+                              'On all vegetables products',
+                              style: TextStyle(
+                                color: Colors.white,
                               ),
                             ),
-                            child: const Center(
-                                child: Text(
-                              "Vegi",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                  shadows: [
-                                    BoxShadow(
-                                        color: Colors.green,
-                                        blurRadius: 10,
-                                        offset: Offset(3, 3))
-                                  ]),
-                            ))),
-                      ),
-                      Text(
-                        '30% Off',
-                        style: TextStyle(
-                            fontSize: 40,
-                            color: Colors.green[100],
-                            fontWeight: FontWeight.bold),
-                      ),
-                      const Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: Text(
-                          'On all vegetables products',
-                          style: TextStyle(
-                            color: Colors.white,
                           ),
-                        ),
-                      ),
-                    ]),
-                  )),
+                        ]),
+                      )),
                   Expanded(child: Container()),
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [Text("Herbs Seasonings"), Text("View All")],
               ),
             )
           ],
