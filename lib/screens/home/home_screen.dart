@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -54,6 +56,22 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
+      body:Column(
+        children: [
+          Container(
+            height: 150,
+            decoration: BoxDecoration(
+            image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: NetworkImage(
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi0Xg-k622Sbztlrb-L1o1CAla3zCbVc2lUw&usqp=CAU'),
+                ),
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(10),
+            ),
+          )
+        ],
+      )
     );
   }
 }
