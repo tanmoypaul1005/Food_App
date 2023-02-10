@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Expanded(
-                      child: Container(
+                    child: Container(
                     // color: Colors.red,
                     child: Column(children: [
                       Padding(
@@ -83,14 +83,14 @@ class HomeScreen extends StatelessWidget {
                         child: Container(
                             height: 50,
                             width: 100,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xffd1ad17),
                               borderRadius: BorderRadius.only(
                                 bottomRight: Radius.circular(50),
                                 bottomLeft: Radius.circular(50),
                               ),
                             ),
-                            child: Center(
+                            child: const Center(
                                 child: Text(
                               "Vegi",
                               style: TextStyle(
@@ -111,14 +111,14 @@ class HomeScreen extends StatelessWidget {
                             color: Colors.green[100],
                             fontWeight: FontWeight.bold),
                       ),
-                      Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Text(
-                              'On all vegetables products',
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
+                      const Padding(
+                        padding: const EdgeInsets.only(left: 20),
+                        child: Text(
+                          'On all vegetables products',
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                     ]),
                   )),
