@@ -69,6 +69,17 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.red,
                 borderRadius: BorderRadius.circular(10),
             ),
+          child: Row(
+            children: [
+              Expanded(child: Container(
+                color:Colors.red,
+                child: Column(children: [
+                  Padding(padding: EdgeInsets.only(right: 120,bottom: 10),child: Container(height: 50,width: 50,),)
+                ]),
+              )),
+              Expanded(child: Container()),
+            ],
+          ),
           )
         ],
       )
