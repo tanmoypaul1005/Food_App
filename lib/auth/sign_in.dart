@@ -27,7 +27,7 @@ class SingIn extends StatelessWidget {
                 children: [
                   Text('Sign in to contunue'),
                   Text(
-                    'Vegi',
+                    'Food App',
                     style:
                         TextStyle(fontSize: 50, color: Colors.white, shadows: [
                       BoxShadow(
