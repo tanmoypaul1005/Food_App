@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 class SingIn extends StatelessWidget {
   const SingIn({super.key});
@@ -39,24 +40,16 @@ class SingIn extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      // SignInButton(
-                      //   Buttons.Apple,
-                      //   text: "Sign in with Apple",
-                      //   onPressed: () {},
-                      // ),
-                      // SignInButton(
-                      //   Buttons.Google,
-                      //   text: "Sign in with Google",
-                      //   onPressed: () async {
-                      //     await _googleSignUp().then(
-                      //       (value) => Navigator.of(context).pushReplacement(
-                      //         MaterialPageRoute(
-                      //           builder: (context) => HomeScreen(),
-                      //         ),
-                      //       ),
-                      //     );
-                      //   },
-                      // ),
+                      SignInButton(
+                        Buttons.Apple,
+                        text: "Sign in with Apple",
+                        onPressed: () {},
+                      ),
+                    SignInButton(
+                        Buttons.Google,
+                        text: "Sign in with Google",
+                         onPressed: () {},
+                      ),
                     ],
                   ),
                   Column(
